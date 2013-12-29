@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CereVoice</title>
+</head>
+<body>
+<h1>CereVoice Cloud Service form</h1>
+<form id="form" method="get" action="https://cerevoice.com/rest/rest_1_1.php" target="_blank">
+	<input type="text" name="text"/>
+	<select name="voice">
+		<option>Dodo</option>
+		<option>Kirsty</option>
+		<option>Heather</option>
+		<option>Stuart</option>
+		<option>Caitlin</option>
+		<option>Yuki</option>
+	</select>
+	<input type="hidden" name="method" value="speakExtended"/>
+	<input type="hidden" name="accountID" value="527e330dea6e4"/>
+	<input type="hidden" name="password" value="AnNLX69eZm"/>
+	<input type="hidden" name="audioFormat" value="wav"/>
+	<input type="hidden" name="sampleRate" value="22050"/>
+	<input type="hidden" name="audio3D" value="True"/>
+	<input type="hidden" name="metadata" value="True"/>
+	<input type="submit"/>
+</form>
+<br/>
+Powered by <a href="https://cerevoice.com/">the CereVoice Cloud Service</a>
+from <a href="http://www.cereproc.com/">CereProc</a>.
+<!--
+<script src="jquery.min.js"></script>
+<script>
+$("#form").submit(function(event) {
+	alert("Handler for .submit() called.");
+	event.preventDefault();
+
+	$.ajax({
+	    url: "https://cerevoice.com/rest/rest_1_1.php",
+	    type: "GET",
+	    dataType: "xml",
+	    success: function(response) {
+            //$('#result').html('success',response);
+            //$(response).find("string").each(function() {
+            //    $('#result').append($(this).text());
+            //});
+			alert('success');
+        },
+        error: function(response) {
+            //$('#result').html('failure',response);
+            alert('error');
+        }});
+
+	alert("Sent2");
+	return false;
+});
+</script>
+-->
+</body>
+</html>
