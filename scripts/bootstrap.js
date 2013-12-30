@@ -5,12 +5,18 @@ require.config({
         templates: '../templates',
         text: '../lib/requirejs-text-2.0.10',
         jquery: '../lib/jquery-1.10.2',
-        handlebars: '../lib/handlebars-1.2.0',
+        underscore: '../lib/underscore-1.5.2',
         main: '../scripts/main'
     },
     shim: {
         jquery: {
             exports: '$'
+        },
+        underscore: {
+            exports: '_'
+        },
+        main: {
+            deps: ['underscore', 'jquery']
         }
     }
 });
