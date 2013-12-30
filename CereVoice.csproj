@@ -17,12 +17,18 @@
     <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="app.css" />
+    <Content Include="lib\handlebars-1.2.0.js" />
+    <Content Include="lib\jquery-1.10.2.js" />
+    <Content Include="lib\require-2.1.9.js" />
+    <Content Include="lib\requirejs-text-2.0.10.js" />
+    <TypeScriptCompile Include="scripts\bootstrap.ts" />
+    <TypeScriptCompile Include="scripts\main.ts" />
+    <Content Include="style\app.css" />
     <Content Include="default.htm" />
+    <Content Include="typedefs\handlebars.d.ts" />
+    <Content Include="typedefs\jquery.d.ts" />
+    <Content Include="typedefs\require.d.ts" />
     <Content Include="web.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <TypeScriptCompile Include="app.ts" />
   </ItemGroup>
   <ItemGroup>
     <None Include="web.Debug.config">
@@ -31,6 +37,9 @@
     <None Include="web.Release.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="templates\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
