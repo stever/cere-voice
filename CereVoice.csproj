@@ -24,7 +24,7 @@
     <TypeScriptCompile Include="scripts\main.ts" />
     <Content Include="lib\underscore-1.5.2.js" />
     <Content Include="style\app.css" />
-    <Content Include="default.htm" />
+    <Content Include="index.html" />
     <Content Include="templates\index.html" />
     <Content Include="typedefs\jquery.d.ts" />
     <Content Include="typedefs\require.d.ts" />

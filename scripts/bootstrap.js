@@ -16,7 +16,7 @@ require.config({
             exports: '_'
         },
         main: {
-            deps: ['underscore', 'jquery']
+            deps: ['jquery', 'underscore']
         }
     }
 });
