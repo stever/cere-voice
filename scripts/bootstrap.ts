@@ -1,7 +1,7 @@
 /// <reference path="../typedefs/require.d.ts" />
 
 require.config({
-    baseUrl: '/scripts',
+    baseUrl: 'scripts',
     paths: {
         templates: '../templates',
         text: '../lib/requirejs-text-2.0.10',
