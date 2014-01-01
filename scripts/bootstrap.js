@@ -22,5 +22,16 @@ require.config({
     }
 });
 
+if (typeof console === "undefined") {
+    console = { log: function () {
+        }, warn: function () {
+        }, error: function () {
+        } };
+}
+
+requirejs.onResourceLoad = function (context, map) {
+    return console.log("[Require.js] loaded", map.name);
+};
+
 require(['main']);
 //# sourceMappingURL=bootstrap.js.map

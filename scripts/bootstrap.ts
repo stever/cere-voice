@@ -23,4 +23,11 @@ require.config({
     },
 });
 
+if (typeof console === "undefined") {
+    console = <any>{ log: () => { }, warn: () => { }, error: () => { } };
+}
+
+requirejs.onResourceLoad = (context, map) =>
+    console.log("[Require.js] loaded", map.name);
+
 require(['main']);
