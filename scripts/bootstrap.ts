@@ -23,9 +23,4 @@ require.config({
     },
 });
 
-
-require(['domReady'], (domReady) => {
-    domReady(() => {
-        require(['main']);
-    });
-});
+require(['main']);

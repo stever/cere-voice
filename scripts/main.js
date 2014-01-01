@@ -8,7 +8,11 @@ if (typeof console === "undefined") {
         } };
 }
 
-require(['text!templates/index.html!strip'], function (t) {
-    $('body').append(_.template(t));
+require(['domReady'], function (domReady) {
+    return domReady(function () {
+        require(['text!templates/index.html!strip'], function (t) {
+            $('body').append(_.template(t));
+        });
+    });
 });
 //# sourceMappingURL=main.js.map

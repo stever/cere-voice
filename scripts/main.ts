@@ -6,6 +6,8 @@ if (typeof console === "undefined") {
     console = <any>{ log: () => { }, warn: () => { }, error: () => { } };
 }
 
-require(['text!templates/index.html!strip'], (t)=> {
-    $('body').append(_.template(t));
-});
+require(['domReady'], (domReady) => domReady(() => {
+    require(['text!templates/index.html!strip'], (t)=> {
+        $('body').append(_.template(t));
+    });
+}));

@@ -22,9 +22,5 @@ require.config({
     }
 });
 
-require(['domReady'], function (domReady) {
-    domReady(function () {
-        require(['main']);
-    });
-});
+require(['main']);
 //# sourceMappingURL=bootstrap.js.map
