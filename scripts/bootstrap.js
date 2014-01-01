@@ -3,9 +3,9 @@ require.config({
     baseUrl: 'scripts',
     paths: {
         templates: '../templates',
-        text: '../lib/requirejs-text-2.0.10',
-        jquery: '../lib/jquery-1.10.2',
-        underscore: '../lib/underscore-1.5.2',
+        text: '../libs/require/text-2.0.10',
+        jquery: '../libs/jquery-1.10.2',
+        underscore: '../libs/underscore-1.5.2',
         main: '../scripts/main'
     },
     shim: {
