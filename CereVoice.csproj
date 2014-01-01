@@ -17,9 +17,9 @@
     <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="libs\require\domReady-2.0.1.js" />
+    <Content Include="libs\require\domready-2.0.1.js" />
     <Content Include="libs\jquery-1.10.2.js" />
-    <Content Include="libs\require\require-2.1.9.js" />
+    <Content Include="libs\require\2.1.9.js" />
     <Content Include="libs\require\text-2.0.10.js" />
     <TypeScriptCompile Include="scripts\bootstrap.ts" />
     <TypeScriptCompile Include="scripts\main.ts" />
