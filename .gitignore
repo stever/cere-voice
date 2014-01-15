@@ -1,5 +1,5 @@
 _ReSharper.*
 *.user
 *.suo
-/bin
-/obj
+/htdocs/bin
+/htdocs/obj
