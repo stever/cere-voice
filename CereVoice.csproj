@@ -23,13 +23,14 @@
     <Content Include="libs\require\text-2.0.10.js" />
     <TypeScriptCompile Include="scripts\bootstrap.ts" />
     <TypeScriptCompile Include="scripts\main.ts" />
-    <Content Include="libs\underscore-1.5.2.js" />
+    <Content Include="libs\riot-0.9.7.js" />
     <Content Include="style\app.css" />
     <Content Include="index.html" />
     <Content Include="templates\index.html" />
     <Content Include="typedefs\jquery.d.ts" />
     <Content Include="typedefs\require.d.ts" />
-    <Content Include="typedefs\underscore.d.ts" />
+    <Content Include="typedefs\riotjs-render.d.ts" />
+    <Content Include="typedefs\riotjs.d.ts" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
