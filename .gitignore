@@ -1,5 +1,2 @@
-_ReSharper.*
-*.user
-*.suo
-/htdocs/bin
-/htdocs/obj
+/scripts/bootstrap.js
+/scripts/main.js

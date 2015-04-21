@@ -5,22 +5,22 @@ require.config({
     paths: {
         templates: '../templates',
         text: '../libs/require/text-2.0.10',
-        domready: '../libs/require/domready-2.0.1',
+        domready: '../libs/require/domReady-2.0.1',
         jquery: '../libs/jquery-1.10.2',
         riot: '../libs/riot-0.9.7',
-        main: '../scripts/main',
+        main: '../scripts/main'
     },
     shim: {
         jquery: {
-            exports: '$',
+            exports: '$'
         },
         riot: {
-            deps: ['jquery'],
+            deps: ['jquery']
         },
         main: {
-            deps: ['riot'],
-        },
-    },
+            deps: ['riot']
+        }
+    }
 });
 
 // Dummy console object where console not provided.
@@ -29,10 +29,8 @@ if (typeof console === "undefined") {
 }
 
 // Require.js logging.
-requirejs.onResourceLoad = (context, map) =>
+requirejs.onResourceLoad = (context, map) => 
     console.log("[Require.js] loaded", map.name);
 
 // Run main script when DOM is ready.
-require(['domready'], (domReady) => domReady(() => {
-    require(['main']);
-}));
+require(['domready'], (domReady) => domReady(() => { require(['main']); }));

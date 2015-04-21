@@ -3,11 +3,14 @@
 /// <reference path="../typedefs/riotjs.d.ts" />
 /// <reference path="../typedefs/riotjs-render.d.ts"/>
 
+var audioElement = document.createElement('audio');
+
 require(['text!templates/index.html!strip'], (t) => {
     $('body').append($.render(t));
 
     // Focus first form element.
-    $('#cerevoiceCloudForm :input:visible:first').focus();
+    var textbox = $('#cerevoiceCloudForm :input[name="text"]');
+    textbox.focus();
 
     // Handle form.
     $('#cerevoiceCloudForm').submit((e) => {
@@ -16,14 +19,13 @@ require(['text!templates/index.html!strip'], (t) => {
         // Get the form variables.
         var inputs = $('#cerevoiceCloudForm :input');
         var values: { [index: string]: any; } = {};
-        inputs.each(function () {
-            values[this.name] = $(this).val();
-            $(this).val('');
-        });
+        inputs.each(function () { values[this.name] = $(this).val(); });
 
         var text = values['text'];
         var voice = values['voice'];
         console.log('Say "' + text + '" in the', voice, 'voice.');
+
+        textbox.val('');
 
         var method = values['method'];
         var accountId = values['accountID'];
@@ -45,12 +47,23 @@ require(['text!templates/index.html!strip'], (t) => {
             + '&metadata=' + encodeURIComponent(metadata)
         ;
 
-        console.log(req);
+        console.log('Request URL:', req);
 
         $.ajax({
-            url: req,
+            url: req
         }).done((data) => {
-            console.log(data);
+            var xml = $($.parseXML(data));
+            var fileUrl = xml.find('fileUrl').text();
+            console.log('fileUrl:', fileUrl);
+
+            audioElement.setAttribute('src', fileUrl);
+            audioElement.load();
+            //audioElement.pause();
+            //audioElement.currentTime = 0;
+            audioElement.play();
+
+            $('<div>' + voice + ': <a href="' + fileUrl + '" target="_blank">'
+                + text + '</a></div>').appendTo('body');
         });
     });
 });

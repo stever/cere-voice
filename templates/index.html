@@ -6,28 +6,44 @@
     <base href="../" />
 </head>
 <body>
-    <h1>CereVoice Cloud Service</h1>
-    <form id="cerevoiceCloudForm" method="get" action="https://cerevoice.com/rest/rest_1_1.php" target="_blank">
-        <input type="text" name="text" />
-        <select name="voice">
-            <option>Dodo</option>
-            <option>Kirsty</option>
-            <option>Heather</option>
-            <option>Stuart</option>
-            <option>Caitlin</option>
-            <option>Yuki</option>
-        </select>
-        <input type="hidden" name="method" value="speakExtended" />
-        <input type="hidden" name="accountID" value="527e330dea6e4" />
-        <input type="hidden" name="password" value="AnNLX69eZm" />
-        <input type="hidden" name="audioFormat" value="wav" />
-        <input type="hidden" name="sampleRate" value="22050" />
-        <input type="hidden" name="audio3D" value="True" />
-        <input type="hidden" name="metadata" value="True" />
-        <input type="submit" />
-    </form>
-    <br />
-    Powered by <a href="https://cerevoice.com/">the CereVoice Cloud Service</a>
-    from <a href="http://www.cereproc.com/">CereProc</a>.
+    <!--<h1>CereVoice Cloud Service</h1>-->
+    <div style="margin-bottom: 10px">
+        <form id="cerevoiceCloudForm" method="get" action="https://cerevoice.com/rest/rest_1_1.php" target="_blank">
+            <select name="voice">
+                <option selected>Heather</option><!-- Scottish female -->
+                <option>Stuart</option><!-- Scottish male -->
+                <option>Kirsty</option><!-- Scottish female -->
+                <option>Dodo</option><!-- Glasgow male (ned) -->
+                <option>Caitlin</option><!-- Irish female -->
+                <option>Adam</option>
+                <option>Claire</option>
+                <option>Giles</option>
+                <option>Hannah</option>
+                <option>Isabella</option>
+                <option>Jack</option>
+                <option>Jess</option>
+                <option>Katherine</option>
+                <option>Lauren</option>
+                <option>Nathan</option>
+                <option>Nicole</option>
+                <option>Sarah</option>
+                <option>Sue</option>
+                <option>William </option>
+            </select>
+            <input type="hidden" name="method" value="speakExtended" />
+            <input type="hidden" name="accountID" value="527e330dea6e4" />
+            <input type="hidden" name="password" value="AnNLX69eZm" />
+            <input type="hidden" name="audioFormat" value="wav" />
+            <input type="hidden" name="sampleRate" value="22050" />
+            <input type="hidden" name="audio3D" value="True" />
+            <input type="hidden" name="metadata" value="True" />
+            <input type="text" size="40" name="text" />
+            <input type="submit" />
+        </form>
+        <!--
+        <br />
+        Powered by <a href="https://www.cereproc.com/en/products/cloud">the CereVoice Cloud Service</a>
+        from <a href="http://www.cereproc.com/">CereProc</a>.-->
+    </div>
 </body>
 </html>
