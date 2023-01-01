@@ -1,4 +1,4 @@
-name: Storybook
+name: Deploy pages
 on:
   workflow_dispatch:
   push:
