@@ -1,9 +1,18 @@
 {
+  "extends": "@tsconfig/node16/tsconfig.json",
   "compilerOptions": {
     "module": "commonjs",
-    "target": "es5",
-    "sourceMap": true
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "target": "es6",
+    "sourceMap": true,
+    "noImplicitAny": false
   },
+  "include": [
+    "scripts"
+  ],
   "exclude": [
     "node_modules"
   ]

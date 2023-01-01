@@ -19,7 +19,7 @@ require(['text!templates/index.html!strip'], (t) => {
         // Get the form variables.
         var inputs = $('#cerevoiceCloudForm :input');
         var values: { [index: string]: any; } = {};
-        inputs.each(function () { values[this.name] = $(this).val(); });
+        inputs.each(function (this: any) { values[this.name] = $(this).val(); });
 
         var text = values['text'];
         var voice = values['voice'];
